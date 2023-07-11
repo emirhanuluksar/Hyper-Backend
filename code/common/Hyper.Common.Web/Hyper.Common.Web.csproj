@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UluarSite.Common\UluarSite.Common.csproj" />
+    <ProjectReference Include="..\Hyper.Common\Hyper.Common.csproj" />
   </ItemGroup>
 
 </Project>
