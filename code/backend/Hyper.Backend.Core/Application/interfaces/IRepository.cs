@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Domain;
 
-namespace Application.DataAccess;
+namespace Application.interfaces;
 
 public interface IRepository<T> where T : class, IEntity, new() {
     IList<T> GetAll();
