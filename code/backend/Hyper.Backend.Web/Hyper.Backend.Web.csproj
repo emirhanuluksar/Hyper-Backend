@@ -16,9 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\common\UluarSite.Common.Web\UluarSite.Common.Web.csproj" />
-    <ProjectReference Include="..\Core\Application\Application.csproj" />
-    <ProjectReference Include="..\Core\Domain\Domain.csproj" />
+    <ProjectReference Include="..\..\common\Hyper.Common.Web\Hyper.Common.Web.csproj" />
+    <ProjectReference Include="..\Hyper.Backend.Core\Application\Application.csproj" />
+    <ProjectReference Include="..\Hyper.Backend.Core\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Hyper.Backend.Infrastructure\Persistence\Persistence.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Application\Application.csproj" />
+    <ProjectReference Include="..\..\Hyper.Backend.Core\Application\Application.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Hyper.Backend.Core\Domain\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
