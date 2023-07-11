@@ -10,7 +10,7 @@ public static class ExceptionExtensions {
         if (includeInnerExceptions && exception is not AggregateException && exception.InnerException is not null) {
             innerExceptions = Detail(exception.InnerException, includeInnerExceptions, false, depth + 1);
         }
-        var result = innerExceptions == string.Empty ? exception.Message : $"{exception.Message}{Environment.NewLine}{string.Concat(Enumerable.Repeat("==", depth))}> {innerExceptions}";
+        var result = innerExceptions?.Length == 0 ? exception.Message : $"{exception.Message}{Environment.NewLine}{string.Concat(Enumerable.Repeat("==", depth))}> {innerExceptions}";
         return includeStackTrace ? $"{result}{Environment.NewLine}{Environment.NewLine}{exception.StackTrace}" : result;
     }
 }
