@@ -1,7 +1,8 @@
 using System.Linq.Expressions;
+using Application.interfaces;
 using Domain;
 
-namespace Application.DataAccess.Repository;
+namespace Persistence.Repository;
 
 public class Repository<T> : IRepository<T> where T : Vehicle, IEntity, new() {
     private static readonly List<Vehicle> _vehicles = new() {
