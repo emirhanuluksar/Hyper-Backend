@@ -1,47 +1,68 @@
+using Application.utilities.constants;
 using Application.interfaces;
 using Application.utilities.Exceptions;
 using Domain;
+using Application.model;
+using AutoMapper;
 
 namespace Application.services;
 
 public class CarService : ICarService {
-    private readonly ICarDal _carDal;
-    public CarService(ICarDal carDal) {
-        _carDal = carDal;
+    public readonly IMapper _mapper;
+    private readonly IVehicleDal _vehicleDal;
+    public CarService(IMapper mapper, IVehicleDal vehicleDal) {
+        _mapper = mapper;
+        _vehicleDal = vehicleDal;
     }
 
-    public void AddCar(Car car) {
-        _carDal.Add(car);
+    public Car AddCar(Car car) {
+        _vehicleDal.Add(car);
+        return car;
     }
 
-    public void DeleteCar(Guid carId) {
-        var result = GetById(carId) ?? throw new CarNotFoundException("Car not found!");
-        _carDal.Delete(result);
+    public Car DeleteCar(Guid carId) {
+        var result = GetById(carId) ?? throw new CarNotFoundException(Constant.CarNotFound);
+        _vehicleDal.Delete(result);
+        return _mapper.Map<Car>(result);
     }
 
-    public List<Car> GetAll() {
-        return _carDal.GetAll().ToList();
+    public CarResponse GetAll() {
+        var vehicleList = _vehicleDal.GetList(x => x.VehicleType == Constant.CarType).ToList();
+        var carList = _mapper.Map<List<Car>>(vehicleList);
+        return CarResponse.Of(carList);
     }
 
     public Car? GetById(Guid carId) {
-        return _carDal.GetById(carId);
+        var car = _vehicleDal.GetById(carId);
+        return _mapper.Map<Car>(car);
     }
 
-    public IList<Car> GetCarsByColor(string carColor) {
-        return _carDal.GetByColor(carColor);
+    public CarResponse GetCarsByColor(string carColor) {
+        var result = _vehicleDal.GetList(x => x.Color == carColor && x.VehicleType == Constant.CarType).ToList();
+        var car = _mapper.Map<List<Car>>(result);
+        return CarResponse.Of(car);
     }
 
-    public void UpdateCar(Car updateCar) {
-        _carDal.Update(updateCar);
+    public Car UpdateCar(Car updateCar) {
+        _vehicleDal.Update(updateCar);
+        return updateCar;
     }
 
-    public void TurnOffTheHeadLights(Car car) {
+    public Car TurnOffTheHeadLights(Car car) {
         car.HeadlightsOn = false;
-        _carDal.Update(car);
+        var vehicle = _mapper.Map<Vehicle>(car);
+        _vehicleDal.Update(vehicle);
+        return car;
     }
 
-    public void TurnOnTheHeadLights(Car car) {
+    public Car TurnOnTheHeadLights(Car car) {
         car.HeadlightsOn = true;
-        _carDal.Update(car);
+        var vehicle = _mapper.Map<Vehicle>(car);
+        _vehicleDal.Update(vehicle);
+        return car;
+    }
+
+    public List<Vehicle> GetVehicles() {
+        return _vehicleDal.GetAll().ToList();
     }
 }
