@@ -17,3 +17,7 @@ Projeyi test edebilmeniz için path = Hyper-Backend/resources/postman yolu ile b
 Genel olarak proje istenen yapının mantığından kopmama şartıyla farklı tasarlanmıştır.
 
 Projenin teslim tarihi en geç 14/07/2023 Cuma günü olduğundan projenin yetişmesi amacıyla bazı kullanılması gereken yapılar es geçilmiştir. Bu proje istenildiği kadar genişletililebilir ve geliştirilebilir.
+
+Projeyi çalıştırmak için windows kullanıyorsanız bash terminalinde şu komudu yazın: `run/bkh-web.sh`
+
+Docker ve Sonar özellikleri daha sonra getirilecek.

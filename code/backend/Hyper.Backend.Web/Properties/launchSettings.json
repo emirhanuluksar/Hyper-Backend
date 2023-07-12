@@ -19,7 +19,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "https": {
+    "Hyper.Bkh.Web.Dev": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
