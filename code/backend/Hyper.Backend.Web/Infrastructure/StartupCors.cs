@@ -7,11 +7,11 @@ public static class StartupCors {
         builder.Services.AddCors(options => {
             options.AddPolicy(name: MyAllowSpecificOrigins, policy => {
                 if (builder.Environment.IsProduction()) {
-                    policy.WithOrigins()
+                    policy.WithOrigins("http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 } else {
-                    policy.WithOrigins()
+                    policy.WithOrigins("http://localhost:4200")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 }
