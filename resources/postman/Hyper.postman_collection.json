@@ -1,0 +1,585 @@
+{
+  "info": {
+    "_postman_id": "915e5394-78eb-407c-962f-3bc093259e99",
+    "name": "Hyper",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24035876",
+    "_collection_link": "https://cloudy-comet-208933.postman.co/workspace/UluarSite~127c6877-bcdc-472d-9ebf-895b59f7fc27/collection/24035876-915e5394-78eb-407c-962f-3bc093259e99?action=share&creator=24035876&source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CarTransactions",
+      "item": [
+        {
+          "name": "TurnOffTheHeadLights",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wheels\": 4,\n    \"headlightsOn\": false,\n    \"vehicleType\": \"Bus\",\n    \"color\": \"white\",\n    \"capacity\": 5,\n    \"length\": 2,\n    \"id\": \"3e325f85-1152-4dbf-9827-ce925455cff3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/TurnOffTheHeadLights",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "TurnOffTheHeadLights"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TurnOnTheHeadLights",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"wheels\": 4,\n    \"headlightsOn\": false,\n    \"vehicleType\": \"Bus\",\n    \"color\": \"white\",\n    \"capacity\": 5,\n    \"length\": 2,\n    \"id\": \"3e325f85-1152-4dbf-9827-ce925455cff3\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/TurnOnTheHeadLights",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "TurnOnTheHeadLights"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "AddCar",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "    {\n        \"Color\": \"green\",\n        \"Wheels\": 4,\n        \"Capacity\": 4,\n        \"Length\": 2\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/AddCar",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "AddCar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCar",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"Id\": \"8ef11423-b2ac-4dc2-801b-9da3e600f289\",\n        \"Color\": \"green\",\n        \"Wheels\": 4,\n        \"Capacity\": 4,\n        \"Length\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/UpdateCar",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "UpdateCar"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteCar",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/DeleteCar/",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "DeleteCar", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Vehicle/GetAllVehicles",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Vehicle", "GetAllVehicles"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCarsByColor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/GetCarsByColor/",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Car", "GetCarsByColor", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCarById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Car/GetCarById/22a02611-66d2-45f8-896f-f1d4689ee0a6",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": [
+                "api",
+                "Car",
+                "GetCarById",
+                "22a02611-66d2-45f8-896f-f1d4689ee0a6"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "BusTransactions",
+      "item": [
+        {
+          "name": "AddBus",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Color\": \"green\",\n    \"Capacity\": 50,\n    \"Length\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/AddBus",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Bus", "AddBus"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateBus",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n        \"Id\": \"8ef11423-b2ac-4dc2-801b-9da3e600f289\",\n        \"Color\": \"green\",\n        \"Wheels\": 4,\n        \"Capacity\": 4,\n        \"Length\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/UpdateBus",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Bus", "UpdateBus"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteBus",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/DeleteBus/",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Bus", "DeleteBus", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/GetAll",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Bus", "GetAll"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusesByColor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/GetBusesByColor/red",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Bus", "GetBusesByColor", "red"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBusById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Bus/GetBusById/f1514967-4b9f-4f0a-8d5c-c84f24133138",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": [
+                "api",
+                "Bus",
+                "GetBusById",
+                "f1514967-4b9f-4f0a-8d5c-c84f24133138"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "VehicleTransactions",
+      "item": [
+        {
+          "name": "GetAllVehicles",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Vehicle/GetAllVehicles",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Vehicle", "GetAllVehicles"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "BoatTransactions",
+      "item": [
+        {
+          "name": "AddBoat",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Color\": \"green\",\n    \"Capacity\": 50,\n    \"Length\": 4\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/AddBoat",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Boat", "AddBoat"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateBoat",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"vehicleType\": \"Boat\",\n    \"color\": \"red\",\n    \"capacity\": 200,\n    \"length\": 8,\n    \"id\": \"1058491f-481a-4775-879d-36277fb296c5\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/UpdateBoat",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Boat", "UpdateBoat"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteBoat",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/DeleteBoat/1058491f-481a-4775-879d-36277fb296c5",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": [
+                "api",
+                "Boat",
+                "DeleteBoat",
+                "1058491f-481a-4775-879d-36277fb296c5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/GetAll",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Boat", "GetAll"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBoatByColor",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/GetBoatsByColor/red",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": ["api", "Boat", "GetBoatsByColor", "red"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBoatById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7066/api/Boat/GetBoatById/1058491f-481a-4775-879d-36277fb296c5",
+              "protocol": "https",
+              "host": ["localhost"],
+              "port": "7066",
+              "path": [
+                "api",
+                "Boat",
+                "GetBoatById",
+                "1058491f-481a-4775-879d-36277fb296c5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
