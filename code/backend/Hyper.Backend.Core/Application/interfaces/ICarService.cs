@@ -1,12 +1,15 @@
+using Application.model;
 using Domain;
 
 namespace Application.interfaces;
 
 public interface ICarService {
-    public void AddCar(Car car);
-    public void UpdateCar(Car updateCar);
-    public void DeleteCar(Guid carId);
-    public IList<Car> GetCarsByColor(string carColor);
+    public Car AddCar(Car car);
+    public Car UpdateCar(Car updateCar);
+    public Car DeleteCar(Guid carId);
+    public CarResponse GetCarsByColor(string carColor);
     public Car? GetById(Guid carId);
-    public List<Car> GetAll();
+    public CarResponse GetAll();
+    public Car TurnOnTheHeadLights(Car car);
+    public Car TurnOffTheHeadLights(Car car);
 }

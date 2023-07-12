@@ -4,6 +4,6 @@ using Persistence.Repository;
 
 namespace Persistence;
 
-public class CarDal : Repository<Car>, ICarDal {
+public class VehicleDal : Repository<Vehicle>, IVehicleDal {
 
 }
