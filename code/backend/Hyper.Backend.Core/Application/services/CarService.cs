@@ -4,15 +4,18 @@ using Application.utilities.Exceptions;
 using Domain;
 using Application.model;
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 
 namespace Application.services;
 
 public class CarService : ICarService {
     public readonly IMapper _mapper;
     private readonly IVehicleDal _vehicleDal;
-    public CarService(IMapper mapper, IVehicleDal vehicleDal) {
+    private readonly ILogger<CarService> _logger;
+    public CarService(IMapper mapper, IVehicleDal vehicleDal, ILogger<CarService> logger) {
         _mapper = mapper;
         _vehicleDal = vehicleDal;
+        _logger = logger;
     }
 
     public Car AddCar(Car car) {
@@ -44,7 +47,8 @@ public class CarService : ICarService {
     }
 
     public Car UpdateCar(Car updateCar) {
-        _vehicleDal.Update(updateCar);
+        var vehicle = _mapper.Map<Vehicle>(updateCar);
+        _vehicleDal.Update(vehicle);
         return updateCar;
     }
 
