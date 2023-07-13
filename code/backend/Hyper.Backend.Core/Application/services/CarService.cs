@@ -47,8 +47,7 @@ public class CarService : ICarService {
     }
 
     public Car UpdateCar(Car updateCar) {
-        var vehicle = _mapper.Map<Vehicle>(updateCar);
-        _vehicleDal.Update(vehicle);
+        _vehicleDal.Update(updateCar);
         return updateCar;
     }
 
